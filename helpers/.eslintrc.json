@@ -1,0 +1,3 @@
+{
+    "extends": ["@amille/eslint-config/react"]
+}

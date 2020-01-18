@@ -1,0 +1,86 @@
+{
+  "name": "@amille/dev-scripts",
+  "version": "0.0.0-development",
+  "description": "Development scripts for node and react projects",
+  "files": [
+    "bin",
+    "configs",
+    "scripts",
+    "helpers"
+  ],
+  "bin": {
+    "am-scripts": "./bin/am-scripts.js"
+  },
+  "repository": "github:amille44420/dev-scripts",
+  "bugs": "https://github.com/amille44420/dev-scripts/issues",
+  "homepage": "https://github.com/amille44420/dev-scripts",
+  "keywords": [
+    "webpack",
+    "react",
+    "scripts",
+    "amille"
+  ],
+  "license": "MIT",
+  "author": "Adrien Mille <adrien.mille.aer@gmail.com>",
+  "dependencies": {
+    "@amille/babel-preset": "^1.0.2",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-named-asset-import": "^0.3.5",
+    "case-sensitive-paths-webpack-plugin": "^2.3.0",
+    "css-loader": "^3.4.2",
+    "dotenv": "^8.2.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^4.0.0-beta.11",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "null-loader": "^3.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "pnp-webpack-plugin": "^1.5.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-normalize": "^8.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-safe-parser": "^4.0.1",
+    "react-deep-force-update": "^2.1.3",
+    "react-dev-utils": "^10.0.0",
+    "resolve-url-loader": "^3.1.1",
+    "rimraf": "^3.0.0",
+    "style-loader": "^1.1.3",
+    "terser-webpack-plugin": "^2.3.2",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.5",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@amille/eslint-config": "^1.2.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^8.0.0",
+    "@semantic-release/github": "^6.0.1",
+    "babel-eslint": "^10.0.3",
+    "commitlint-circle": "^1.0.0",
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "semantic-release": "^16.0.3"
+  },
+  "optionalDependencies": {
+    "express": "^4.17.1",
+    "react": "^16.12.0",
+    "react-dom": "16.12.0"
+  },
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:commit": "commitlint",
+    "lint:commit:ci": "commitlint-circle",
+    "publish": "semantic-release"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
