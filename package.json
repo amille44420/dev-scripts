@@ -54,7 +54,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
-    "@amille/eslint-config": "^1.1.1",
+    "@amille/eslint-config": "^1.2.0",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@semantic-release/changelog": "^3.0.6",
