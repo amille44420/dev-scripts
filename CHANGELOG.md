@@ -1,3 +1,16 @@
+# [1.0.0-next.2](https://github.com/amille44420/dev-scripts/compare/v1.0.0-next.1...v1.0.0-next.2) (2020-01-24)
+
+
+### Bug Fixes
+
+* **build:** remove undefined plugin on production build for node ([dc2aa5b](https://github.com/amille44420/dev-scripts/commit/dc2aa5b8ccafeae71d667f2e11786271bc399901))
+* **webpack-node:** use package.json for node externals ([1158870](https://github.com/amille44420/dev-scripts/commit/1158870a817675d6927969b3eee3984b9d88064f))
+
+
+### Features
+
+* provide an entry point to override webpack ([bcfb7c7](https://github.com/amille44420/dev-scripts/commit/bcfb7c7fc2d0a4bb0b41d7fa3ad52df499c3a4ea))
+
 # 1.0.0-next.1 (2020-01-24)
 
 
