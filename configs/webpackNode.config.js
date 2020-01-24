@@ -89,7 +89,7 @@ const config = {
         // makes the discovery automatic so you don't have to restart.
         // See https://github.com/facebook/create-react-app/issues/186
         isEnvDevelopment && new WatchMissingNodeModulesPlugin(paths.appNodeModules),
-    ],
+    ].filter(Boolean),
 
     externals: [nodeExternals()],
 
