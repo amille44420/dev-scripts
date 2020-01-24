@@ -91,7 +91,7 @@ const config = {
         isEnvDevelopment && new WatchMissingNodeModulesPlugin(paths.appNodeModules),
     ].filter(Boolean),
 
-    externals: [nodeExternals()],
+    externals: [nodeExternals({ modulesFromFile: true })],
 
     // Stop compilation early in production
     bail: isEnvProduction,
