@@ -256,7 +256,7 @@ const config = {
                         test: path.resolve(paths.appNodeModules, 'node_modules/react-deep-force-update/lib/index.js'),
                         loader: 'null-loader',
                     },
-                ],
+                ].filter(Boolean),
             },
         ],
     },
