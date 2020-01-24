@@ -113,6 +113,17 @@ module.exports = {
 };
 ```
 
+### Override webpack
+
+The webpack configuration can be override by creating a `overrideWebpack.js` file at your root directory.
+
+```js
+module.exports = webpackConfig => {
+    /* override here */
+    return webpackConfig;
+};
+```
+
 #### Hot reload entry point
 
 The hot reload for browser apps is based on `react-deep-force-updates`.
@@ -145,7 +156,7 @@ const renderApp = () => {
             // for development we throw the errors back
             throw error;
         }
-        
+
         // and print errors in console anyway
         console.error(error);
     }

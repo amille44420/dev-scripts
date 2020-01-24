@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const options = require('../configs/options');
 const paths = require('../configs/paths');
 const { cleanBuild } = require('./build');
+const overrideWebpack = require('./overrideWebpack');
 
 const { urls, host, port } = options;
 
@@ -21,7 +22,7 @@ const start = (webpackConfig, startServer) => {
     // Create a webpack compiler that is configured with custom messages.
     const compiler = createCompiler({
         appName: pkg.name,
-        config: webpackConfig,
+        config: overrideWebpack(webpackConfig),
         urls,
         useYarn: true,
         webpack,

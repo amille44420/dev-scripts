@@ -17,6 +17,7 @@ module.exports = {
     appPackageJson: resolveApp('package.json'),
     appSrc: resolveApp('src'),
     yarnLockFile: resolveApp('yarn.lock'),
-    proxySetup: resolveApp('src/setupProxy.js'),
+    proxySetup: resolveApp('setupProxy.js'),
     appNodeModules: resolveApp('node_modules'),
+    webpackOverrideFile: resolveApp('overrideWebpack.js'),
 };
