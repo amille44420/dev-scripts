@@ -1,6 +1,6 @@
 {
   "name": "@amille/dev-scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Development scripts for node and react projects",
   "files": [
     "bin",

@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/amille44420/dev-scripts/compare/v1.0.0...v1.0.1) (2020-01-24)
+
+
+### Bug Fixes
+
+* **webpack-browser:** remove undefined rules ([0e5ddf6](https://github.com/amille44420/dev-scripts/commit/0e5ddf618a5a5d0d08a4e428a8f4d2f0512ec2f8))
+
 # 1.0.0 (2020-01-24)
 
 
