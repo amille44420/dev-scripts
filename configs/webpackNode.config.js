@@ -80,6 +80,13 @@ const config = {
         // during a production build.
         // Otherwise React will be compiled in the very slow development mode.
         new webpack.DefinePlugin(env.stringified),
+        // Adds a banner to the top of each generated chunk
+        // https://webpack.js.org/plugins/banner-plugin/
+        new webpack.BannerPlugin({
+            banner: 'require("source-map-support").install();',
+            raw: true,
+            entryOnly: false,
+        }),
         // Watcher doesn't work well if you mistype casing in a path so we use
         // a plugin that prints an error when you attempt to do this.
         // See https://github.com/facebook/create-react-app/issues/240
