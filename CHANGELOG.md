@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/amille44420/dev-scripts/compare/v1.0.1...v1.1.0) (2020-01-26)
+
+
+### Features
+
+* **webpack-node:** add BannerPlugin to webpack configuration ([5063fd9](https://github.com/amille44420/dev-scripts/commit/5063fd9ac3ef07143d18af870ef43046c8019c5d))
+
 ## [1.0.1](https://github.com/amille44420/dev-scripts/compare/v1.0.0...v1.0.1) (2020-01-24)
 
 
