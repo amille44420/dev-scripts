@@ -53,27 +53,9 @@ jobs:
 
 workflows:
   version: 2
-  test:
+  build:
     jobs:
-      - deps-install:
-          filters:
-            branches:
-              ignore:
-                - master
-      - code-lint:
-          requires:
-            - deps-install
-      - commit-lint:
-          requires:
-            - deps-install
-  test-and-publish:
-    jobs:
-      - deps-install:
-          filters:
-            branches:
-              only:
-                - master
-                - next
+      - deps-install
       - code-lint:
           requires:
             - deps-install
@@ -81,6 +63,11 @@ workflows:
           requires:
             - deps-install
       - publish:
+          filters:
+            branches:
+              only:
+                - master
+                - next
           requires:
             - code-lint
             - commit-lint
