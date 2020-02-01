@@ -1,17 +1,23 @@
 # @amille/dev-scripts
 
+![npm (tag)](https://img.shields.io/npm/v/@amille/dev-scripts/latest)
+![npm (tag)](https://img.shields.io/npm/v/@amille/dev-scripts/next)
+![CircleCI](https://img.shields.io/circleci/build/github/amille44420/dev-scripts)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+
 Bunch of webpack scripts ready to use for node and browser react projects.
 
 ## Installation
 
-First add `@amille/dev-tools` into your development dependencies.
+First add `@amille/dev-scripts` into your development dependencies.
 
 ```sh
 # using npm
-npm install --save-dev @amille/dev-tools
+npm install --save-dev @amille/dev-scripts
 
 # or using yarn
-yarn add -D @amille/dev-tools
+yarn add -D @amille/dev-scripts
 ```
 
 You may now move onto the next section related to your needs.
