@@ -1,9 +1,10 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssNormalize = require('postcss-normalize');
-const { isEnvProduction, isEnvDevelopment } = require('../options');
 
-const getStyleLoaders = cssOptions =>
-    [
+const getStyleLoaders = (cssOptions, options) => {
+    const { isEnvProduction, isEnvDevelopment } = options;
+
+    return [
         // use style loader on development so we can reasily apply hot reload updates
         isEnvDevelopment && require.resolve('style-loader'),
         // on production however we will extract the css
@@ -42,21 +43,26 @@ const getStyleLoaders = cssOptions =>
             },
         },
     ].filter(Boolean);
+};
 
-const getLessLoaders = cssOptions => [
-    ...getStyleLoaders(cssOptions),
-    {
-        loader: require.resolve('resolve-url-loader'),
-        options: {
-            sourceMap: isEnvProduction,
+const getLessLoaders = (cssOptions, options) => {
+    const { isEnvProduction } = options;
+
+    return [
+        ...getStyleLoaders(cssOptions),
+        {
+            loader: require.resolve('resolve-url-loader'),
+            options: {
+                sourceMap: isEnvProduction,
+            },
         },
-    },
-    {
-        loader: require.resolve('less-loader'),
-        options: {
-            sourceMap: true,
+        {
+            loader: require.resolve('less-loader'),
+            options: {
+                sourceMap: true,
+            },
         },
-    },
-];
+    ];
+};
 
 module.exports = { getStyleLoaders, getLessLoaders };

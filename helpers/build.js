@@ -1,20 +1,20 @@
 const fs = require('fs');
 const rimraf = require('rimraf');
 const webpack = require('webpack');
-const paths = require('../configs/paths');
-const overrideWebpack = require('./overrideWebpack');
 
-const cleanBuild = () => {
+const cleanBuild = ({ paths }) => {
     rimraf.sync(paths.appBuild);
     fs.mkdirSync(paths.appBuild);
 };
 
-const build = webpackConfig => {
+const build = (settings, webpackConfig) => {
+    const { hooks } = settings;
+
     // clean the build directory
-    cleanBuild();
+    cleanBuild(settings);
 
     const promise = new Promise((resolve, reject) =>
-        webpack(overrideWebpack(webpackConfig)).run((err, stats) => {
+        webpack(hooks.overrideWebpack(webpackConfig, settings)).run((err, stats) => {
             if (err) {
                 return reject(err);
             }

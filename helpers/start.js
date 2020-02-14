@@ -3,26 +3,24 @@ const chalk = require('react-dev-utils/chalk');
 const clearConsole = require('react-dev-utils/clearConsole');
 const openBrowser = require('react-dev-utils/openBrowser');
 const webpack = require('webpack');
-const options = require('../configs/options');
-const paths = require('../configs/paths');
 const { cleanBuild } = require('./build');
-const overrideWebpack = require('./overrideWebpack');
-
-const { urls, host, port } = options;
-
-// eslint-disable-next-line import/no-dynamic-require
-const pkg = require(paths.appPackageJson);
 
 const isInteractive = process.stdout.isTTY;
 
-const start = (webpackConfig, startServer) => {
+const start = (settings, webpackConfig, startServer) => {
+    const { options, paths, hooks } = settings;
+    const { urls, host, port } = options;
+
+    // eslint-disable-next-line import/no-dynamic-require, global-require
+    const pkg = require(paths.appPackageJson);
+
     // clean build dir
-    cleanBuild();
+    cleanBuild(settings);
 
     // Create a webpack compiler that is configured with custom messages.
     const compiler = createCompiler({
         appName: pkg.name,
-        config: overrideWebpack(webpackConfig),
+        config: hooks.overrideWebpack(webpackConfig, settings),
         urls,
         useYarn: true,
         webpack,

@@ -6,8 +6,9 @@ const { resolveModule } = require('../helpers/paths');
 // https://github.com/facebook/create-react-app/issues/637
 const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
+const hookFile = resolveApp('dev-scripts.hooks.js');
 
-module.exports = {
+const getPaths = () => ({
     dotenv: resolveApp('.env'),
     appPath: resolveApp('.'),
     appBuild: resolveApp('build'),
@@ -19,5 +20,6 @@ module.exports = {
     yarnLockFile: resolveApp('yarn.lock'),
     proxySetup: resolveApp('setupProxy.js'),
     appNodeModules: resolveApp('node_modules'),
-    webpackOverrideFile: resolveApp('overrideWebpack.js'),
-};
+});
+
+module.exports = { getPaths, appDirectory, hookFile };
