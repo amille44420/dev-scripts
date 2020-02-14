@@ -1,4 +1,4 @@
 const cssOptimize = require('./cssOptimize');
-const terser = require('./terser');
+const getTerser = require('./terser');
 
-module.exports = { terser, cssOptimize };
+module.exports = { getTerser, cssOptimize };

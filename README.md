@@ -5,7 +5,6 @@
 ![CircleCI](https://img.shields.io/circleci/build/github/amille44420/dev-scripts)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-
 Bunch of webpack scripts ready to use for node and browser react projects.
 
 ## Installation
@@ -103,31 +102,56 @@ or in your javascript files
 console.log(`my global is ${process.env.NAME}`);
 ```
 
-#### Setup proxy
+### Override
 
-You may access the `after` and `before` hooks from `webpack-dev-server`
-by creating a `setupProxy.js` file at your root directory.
-
-```js
-module.exports = {
-    after(app, server) {
-        // ...
-    },
-    before(app, server) {
-        // ...
-    },
-};
-```
-
-### Override webpack
-
-The webpack configuration can be override by creating a `overrideWebpack.js` file at your root directory.
+This package comes with many available hooks to override configurations at specific key points.
+To setup hooks you simply need to create a file `react-scripts.hooks.js` at your root directory.
 
 ```js
-module.exports = webpackConfig => {
-    /* override here */
+const hooks = require('amille@react-scripts/helpers/hooks');
+
+/* for all hooks, "any" can be replaced by "node" or "browser" to run on specific build target */
+
+/* overrideOptions, overrideEnv & overridePaths allows you to override settings */
+
+hooks.any.overrideOptions((options, settings) => {
+    // options must be returned
+    return options;
+});
+
+hooks.any.overrideEnv((env, settings) => {
+    // env must be returned
+    return env;
+});
+
+hooks.any.overridePaths((paths, settings) => {
+    // paths must be returned
+    return paths;
+});
+
+/* overrideSettings allows to override the whole settings object */
+
+hooks.any.overrideSettings(settings => {
+    // settings must be returned
+    return settings;
+});
+
+/* overrideWebpack allows to override the whole webpack config */
+
+hooks.any.overrideWebpack((webpackConfig, settings) => {
+    // webpackConfig must be returned
     return webpackConfig;
-};
+});
+
+/* setupProxyOnBefore & setupProxyOnAfter are helpful to setup proxies in react web dev servers lifecycle */
+
+hooks.any.setupProxyOnBefore((app, server, settings) => {
+    /* ... */
+});
+
+hooks.any.setupProxyOnAfter((app, server, settings) => {
+    /* ... */
+});
 ```
 
 #### Hot reload entry point

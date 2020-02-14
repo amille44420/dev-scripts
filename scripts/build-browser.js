@@ -1,4 +1,8 @@
-const webpackConfig = require('../configs/webpackReact.config');
+const getSettings = require('../configs/settings');
+const getWebpackConfig = require('../configs/webpackReact.config');
 const { build } = require('../helpers/build');
 
-build(webpackConfig);
+const settings = getSettings('browser');
+const webpackConfig = getWebpackConfig(settings);
+
+build(settings, webpackConfig);

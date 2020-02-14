@@ -2,10 +2,14 @@ const path = require('path');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const express = require('express');
 const { appBuild } = require('../configs/paths');
-const webpackConfig = require('../configs/webpackNode.config');
+const getSettings = require('../configs/settings');
+const getWebpackConfig = require('../configs/webpackNode.config');
 const start = require('../helpers/start');
 
 const serverPath = path.resolve(appBuild, 'server.js');
+
+const settings = getSettings('node');
+const webpackConfig = getWebpackConfig(settings);
 
 const startServer = compiler => {
     // create promise on the compilation
@@ -72,4 +76,4 @@ const startServer = compiler => {
     return devServer;
 };
 
-start(webpackConfig, startServer);
+start(settings, webpackConfig, startServer);
