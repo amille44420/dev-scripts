@@ -1,3 +1,15 @@
+# [2.0.0-next.1](https://github.com/amille44420/dev-scripts/compare/v1.1.5...v2.0.0-next.1) (2020-02-14)
+
+
+### Features
+
+* provide hook system to have dynamic settings on runtime ([b0d809b](https://github.com/amille44420/dev-scripts/commit/b0d809bfcf97d46fd8b894edf10a355488b1fc72))
+
+
+### BREAKING CHANGES
+
+* the whole customization has been updated to hooks
+
 ## [1.1.5](https://github.com/amille44420/dev-scripts/compare/v1.1.4...v1.1.5) (2020-02-12)
 
 ## [1.1.4](https://github.com/amille44420/dev-scripts/compare/v1.1.3...v1.1.4) (2020-02-11)
