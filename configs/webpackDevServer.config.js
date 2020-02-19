@@ -1,13 +1,15 @@
+const { prepareUrls } = require('react-dev-utils/WebpackDevServerUtils');
 const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware');
 const evalSourceMapMiddleware = require('react-dev-utils/evalSourceMapMiddleware');
 const ignoredFiles = require('react-dev-utils/ignoredFiles');
 
 const config = settings => {
     const { paths, options, hooks } = settings;
-    const { host, urls, protocol } = options;
+    const { host, port, protocol, disableHostCheck } = options;
+    const urls = prepareUrls('http', host, port);
 
     return {
-        disableHostCheck: process.env.DANGEROUSLY_DISABLE_HOST_CHECK === 'true',
+        disableHostCheck,
         // Enable gzip compression of generated files.
         compress: true,
         // Silence WebpackDevServer's own logs since they're generally not useful.

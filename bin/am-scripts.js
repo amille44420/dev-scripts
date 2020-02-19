@@ -19,11 +19,6 @@ const scriptIndex = args.findIndex(x => x === 'build' || x === 'start');
 const script = scriptIndex === -1 ? args[0] : args[scriptIndex];
 const nodeArgs = scriptIndex > 0 ? args.slice(0, scriptIndex) : [];
 
-if (!process.env.NODE_ENV) {
-    console.error(chalk.red('NODE_ENV must be defined'));
-    process.exit(1);
-}
-
 const scripts = ['start-browser', 'start-node', 'build-browser', 'build-node'];
 
 if (scripts.includes(script)) {
