@@ -6,7 +6,7 @@ const createHook = hookType => ({
     execute(...args) {
         switch (hookType) {
             case 'reduce': {
-                const { entity, ...context } = args;
+                const [entity, ...context] = args;
 
                 return this.callbacks.reduce((cleanedEntity, callback) => {
                     return callback(cleanedEntity, ...context);
@@ -46,7 +46,7 @@ module.exports = {
     any: createProxy(null),
     node: createProxy('node'),
     browser: createProxy('browser'),
-    prepareForTarget(currentTarget) {
+    cloneForTarget(currentTarget) {
         return Object.entries(hooks).reduce((newHooks, [key, hook]) => {
             const newHook = {
                 ...hook,
