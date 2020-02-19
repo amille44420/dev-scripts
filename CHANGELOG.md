@@ -1,3 +1,10 @@
+# [2.0.0-next.2](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.1...v2.0.0-next.2) (2020-02-19)
+
+
+### Features
+
+* move every env settings into the option step ([b7811a7](https://github.com/amille44420/dev-scripts/commit/b7811a7fc4f406a9da66113b386569e2d6d3d4a7))
+
 # [2.0.0-next.1](https://github.com/amille44420/dev-scripts/compare/v1.1.5...v2.0.0-next.1) (2020-02-14)
 
 
