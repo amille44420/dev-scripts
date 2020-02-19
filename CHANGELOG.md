@@ -1,3 +1,10 @@
+# [2.0.0-next.3](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.2...v2.0.0-next.3) (2020-02-19)
+
+
+### Bug Fixes
+
+* fix hooks and start scripts ([5b22d51](https://github.com/amille44420/dev-scripts/commit/5b22d51dc291b90b1804da35fa764131350a08be))
+
 # [2.0.0-next.2](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.1...v2.0.0-next.2) (2020-02-19)
 
 
