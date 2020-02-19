@@ -1,3 +1,4 @@
+const { prepareUrls } = require('react-dev-utils/WebpackDevServerUtils');
 const { createCompiler } = require('react-dev-utils/WebpackDevServerUtils');
 const chalk = require('react-dev-utils/chalk');
 const clearConsole = require('react-dev-utils/clearConsole');
@@ -9,7 +10,8 @@ const isInteractive = process.stdout.isTTY;
 
 const start = (settings, webpackConfig, startServer) => {
     const { options, paths, hooks } = settings;
-    const { urls, host, port } = options;
+    const { host, port } = options;
+    const urls = prepareUrls('http', host, port);
 
     // eslint-disable-next-line import/no-dynamic-require, global-require
     const pkg = require(paths.appPackageJson);
