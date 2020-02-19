@@ -32,7 +32,7 @@ You project must follow this setup :
 |   | - index.jsx (bundle entry point)
 | - /public (public directory)
 |   | - index.html (template file for your bundle html entry)
-| - setupProxy.js (optional setup proxy file)
+| - dev-scripts.hooks.js (optional hook file)
 ```
 
 You may add the following scripts to your owns
@@ -105,10 +105,10 @@ console.log(`my global is ${process.env.NAME}`);
 ### Override
 
 This package comes with many available hooks to override configurations at specific key points.
-To setup hooks you simply need to create a file `react-scripts.hooks.js` at your root directory.
+To setup hooks you simply need to create a file `dev-scripts.hooks.js` at your root directory.
 
 ```js
-const hooks = require('amille@react-scripts/helpers/hooks');
+const hooks = require('@amille/dev-scripts/helpers/hooks');
 
 /* for all hooks, "any" can be replaced by "node" or "browser" to run on specific build target */
 
