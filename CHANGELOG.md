@@ -1,3 +1,10 @@
+# [2.0.0-next.5](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.4...v2.0.0-next.5) (2020-02-20)
+
+
+### Features
+
+* allow experimental usage of react-refresh for HMR ([e3d587a](https://github.com/amille44420/dev-scripts/commit/e3d587ad1dc4f210792185f23aa0d1a3887909b8))
+
 # [2.0.0-next.4](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.3...v2.0.0-next.4) (2020-02-20)
 
 
