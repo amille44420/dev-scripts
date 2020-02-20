@@ -181,10 +181,13 @@ const getWebpackConfig = settings => {
                         {
                             test: cssRegex,
                             exclude: cssModuleRegex,
-                            use: getStyleLoaders({
-                                importLoaders: 1,
-                                sourceMap: isEnvProduction,
-                            }),
+                            use: getStyleLoaders(
+                                {
+                                    importLoaders: 1,
+                                    sourceMap: isEnvProduction,
+                                },
+                                options
+                            ),
                             // Don't consider CSS imports dead code even if the
                             // containing package claims to have no side effects.
                             // Remove this when webpack adds a warning or an error for this.
@@ -196,13 +199,16 @@ const getWebpackConfig = settings => {
                         // using the extension .module.css
                         {
                             test: cssModuleRegex,
-                            use: getStyleLoaders({
-                                importLoaders: 1,
-                                sourceMap: isEnvProduction,
-                                modules: {
-                                    getLocalIdent: getCSSModuleLocalIdent,
+                            use: getStyleLoaders(
+                                {
+                                    importLoaders: 1,
+                                    sourceMap: isEnvProduction,
+                                    modules: {
+                                        getLocalIdent: getCSSModuleLocalIdent,
+                                    },
                                 },
-                            }),
+                                options
+                            ),
                         },
 
                         // Opt-in support for LESS

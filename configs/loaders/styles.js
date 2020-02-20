@@ -49,7 +49,7 @@ const getLessLoaders = (cssOptions, options) => {
     const { isEnvProduction } = options;
 
     return [
-        ...getStyleLoaders(cssOptions),
+        ...getStyleLoaders(cssOptions, options),
         {
             loader: require.resolve('resolve-url-loader'),
             options: {
