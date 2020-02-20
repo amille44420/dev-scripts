@@ -154,10 +154,25 @@ hooks.any.setupProxyOnAfter((app, server, settings) => {
 });
 ```
 
+#### React refresh (experimental)
+
+This package provide an experimental HMR based on `react-refresh`. 
+To enable it you must either override the option `withReactRefresh` using hooks.
+
+```js
+hooks.browser.overrideOptions(options => {
+    options.withReactRefresh = true;
+
+    return options;
+});
+```
+
 #### Hot reload entry point
 
 The hot reload for browser apps is based on `react-deep-force-updates`.
 Setup your entry point as the following example.
+
+**if you use `react-refresh` experimental feature, you don't have to do any of this for your HMR**
 
 ```js
 import { createElement } from 'react';

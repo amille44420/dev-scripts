@@ -23,6 +23,8 @@ const getOptions = () => {
         port,
         protocol: process.env.HTTPS === 'true' ? 'https' : 'http',
         disableHostCheck: process.env.DANGEROUSLY_DISABLE_HOST_CHECK === 'true',
+        // experimental feature(s)
+        withReactRefresh: false,
     };
 };
 

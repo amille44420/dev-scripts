@@ -1,4 +1,5 @@
 const path = require('path');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -28,6 +29,7 @@ const getWebpackConfig = settings => {
         cssRegex,
         lessModuleRegex,
         lessRegex,
+        withReactRefresh,
     } = options;
 
     return {
@@ -160,6 +162,7 @@ const getWebpackConfig = settings => {
                                             },
                                         },
                                     ],
+                                    isEnvDevelopment && withReactRefresh && require.resolve('react-refresh/babel'),
                                 ],
                                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                                 // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -341,6 +344,9 @@ const getWebpackConfig = settings => {
             // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
             // You can remove this if you don't use Moment.js:
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+            // React refresh experimental feature
+            // https://github.com/pmmmwh/react-refresh-webpack-plugin
+            isEnvDevelopment && withReactRefresh && new ReactRefreshWebpackPlugin({ disableRefreshCheck: true }),
         ].filter(Boolean),
 
         optimization: {
