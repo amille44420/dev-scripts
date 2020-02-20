@@ -1,3 +1,10 @@
+# [2.0.0-next.4](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.3...v2.0.0-next.4) (2020-02-20)
+
+
+### Bug Fixes
+
+* pass options to getStyleLoaders ([70d832d](https://github.com/amille44420/dev-scripts/commit/70d832dcd650aed405ca4fa407d483247cf01bc2))
+
 # [2.0.0-next.3](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.2...v2.0.0-next.3) (2020-02-19)
 
 
