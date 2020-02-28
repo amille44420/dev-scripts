@@ -1,3 +1,16 @@
+# [2.0.0-next.6](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.5...v2.0.0-next.6) (2020-02-28)
+
+
+### Features
+
+* add custom webpack plugin WebpackPackagePlugin ([02b08d4](https://github.com/amille44420/dev-scripts/commit/02b08d421548a90daca1c9303576144887c29e39))
+* stop using default export for node hmr ([76d2250](https://github.com/amille44420/dev-scripts/commit/76d225071fec54b77a8d3a86f69c86884d2e5f63))
+
+
+### BREAKING CHANGES
+
+* the server entry point must now use module.exports to return the server instance instance of default export
+
 # [2.0.0-next.5](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.4...v2.0.0-next.5) (2020-02-20)
 
 
