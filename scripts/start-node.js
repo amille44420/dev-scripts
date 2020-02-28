@@ -49,7 +49,7 @@ const startServer = compiler => {
 
                 // now we can get the latest version of our server
                 // eslint-disable-next-line global-require, import/no-unresolved
-                server = require(serverPath).default;
+                server = require(serverPath);
 
                 console.warn('[\x1b[35mHot Reload\x1b[0m]  Server has been reloaded.');
             } catch (runtimeError) {
