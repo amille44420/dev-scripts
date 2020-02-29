@@ -1,3 +1,10 @@
+# [2.0.0-next.8](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.7...v2.0.0-next.8) (2020-02-29)
+
+
+### Features
+
+* **WebpackPackagePlugin:** customize stringify to get a cleaner package file ([7cd15c9](https://github.com/amille44420/dev-scripts/commit/7cd15c9e80b386c72d03227c576e246fb5228d66))
+
 # [2.0.0-next.7](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.6...v2.0.0-next.7) (2020-02-29)
 
 
