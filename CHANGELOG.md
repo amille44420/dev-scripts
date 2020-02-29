@@ -1,3 +1,10 @@
+# [2.0.0-next.10](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.9...v2.0.0-next.10) (2020-02-29)
+
+
+### Bug Fixes
+
+* remove invalid plugins from babel loader for react production build ([0c65943](https://github.com/amille44420/dev-scripts/commit/0c65943770d0a96f586a3bafe601b0eb9a8e438d))
+
 # [2.0.0-next.9](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.8...v2.0.0-next.9) (2020-02-29)
 
 
