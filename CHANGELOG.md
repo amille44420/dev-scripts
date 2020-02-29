@@ -1,3 +1,10 @@
+# [2.0.0-next.9](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.8...v2.0.0-next.9) (2020-02-29)
+
+
+### Features
+
+* create build directory using recursive option ([c5999d4](https://github.com/amille44420/dev-scripts/commit/c5999d4418621b893a6321fa682132b6f04c3135))
+
 # [2.0.0-next.8](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.7...v2.0.0-next.8) (2020-02-29)
 
 
