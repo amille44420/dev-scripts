@@ -75,10 +75,14 @@ class WebpackPackagePlugin {
             this.options.additionalModules.forEach(addDependency);
 
             // write the new package.json
-            const output = JSON.stringify({
-                ...this.options.packageContent,
-                dependencies,
-            });
+            const output = JSON.stringify(
+                {
+                    ...this.options.packageContent,
+                    dependencies,
+                },
+                null,
+                '\t'
+            );
 
             // add it through webpack assets
             // eslint-disable-next-line no-param-reassign
