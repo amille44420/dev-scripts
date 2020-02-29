@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 const cleanBuild = ({ paths }) => {
     rimraf.sync(paths.appBuild);
-    fs.mkdirSync(paths.appBuild);
+    fs.mkdirSync(paths.appBuild, { recursive: true });
 };
 
 const build = (settings, webpackConfig) => {
