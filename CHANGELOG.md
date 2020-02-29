@@ -1,3 +1,10 @@
+# [2.0.0-next.7](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.6...v2.0.0-next.7) (2020-02-29)
+
+
+### Bug Fixes
+
+* **WebpackPackagePlugin:** fix mistake in checks ([fc8c062](https://github.com/amille44420/dev-scripts/commit/fc8c062ac91729bc5c9d39cd6a6ce9f724c3e6db))
+
 # [2.0.0-next.6](https://github.com/amille44420/dev-scripts/compare/v2.0.0-next.5...v2.0.0-next.6) (2020-02-28)
 
 
