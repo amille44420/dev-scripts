@@ -31,7 +31,7 @@ class WebpackPackagePlugin {
             throw new Error('packageJson file must be provided.');
         }
 
-        if (fs.existsSync(packageJson)) {
+        if (!fs.existsSync(packageJson)) {
             throw new Error(`${packageJson} file not found.`);
         }
 
