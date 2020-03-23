@@ -6,10 +6,7 @@ const pluginName = 'WebpackPackagePlugin';
 
 const getParentIdentifier = identifier => {
     if (identifier[0] === '@') {
-        return identifier
-            .split('/')
-            .slice(0, 2)
-            .join('/');
+        return identifier.split('/').slice(0, 2).join('/');
     }
 
     return identifier.split('/')[0];
