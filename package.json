@@ -73,7 +73,7 @@
   "optionalDependencies": {
     "express": "^4.17.1",
     "react": "^16.13.0",
-    "react-dom": "16.13.0"
+    "react-dom": "16.13.1"
   },
   "scripts": {
     "lint": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
