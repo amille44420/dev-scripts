@@ -150,7 +150,7 @@ const getWebpackConfig = settings => {
                                 presets: [require.resolve('@amille/babel-preset')],
                                 // Make sure we have a unique cache identifier, erring on the
                                 // side of caution.
-                                cacheIdentifier: babelCacheIdentifier,
+                                cacheIdentifier: babelCacheIdentifier(options),
                                 plugins: [
                                     [
                                         require.resolve('babel-plugin-named-asset-import'),
