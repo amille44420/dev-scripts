@@ -1,3 +1,10 @@
+## [2.0.14](https://github.com/amille44420/dev-scripts/compare/v2.0.13...v2.0.14) (2020-04-06)
+
+
+### Bug Fixes
+
+* fix invalid babel cache identifier ([1ba50c0](https://github.com/amille44420/dev-scripts/commit/1ba50c03d073f407a4dc35db7b6d26babf2745cf))
+
 ## [2.0.13](https://github.com/amille44420/dev-scripts/compare/v2.0.12...v2.0.13) (2020-04-02)
 
 ## [2.0.12](https://github.com/amille44420/dev-scripts/compare/v2.0.11...v2.0.12) (2020-03-30)
