@@ -1,10 +1,6 @@
 #!/usr/bin/env node
-const dotenv = require('dotenv');
 const chalk = require('react-dev-utils/chalk');
 const spawn = require('react-dev-utils/crossSpawn');
-
-// configure dotenv
-dotenv.config();
 
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will

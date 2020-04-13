@@ -1,12 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-const { resolveModule } = require('../helpers/paths');
-
-// Make sure any symlinks in the project folder are resolved:
-// https://github.com/facebook/create-react-app/issues/637
-const appDirectory = fs.realpathSync(process.cwd());
-const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
-const hookFile = resolveApp('dev-scripts.hooks.js');
+const { appDirectory, resolveModule, resolveApp, hookFile } = require('../helpers/paths');
 
 const getPaths = () => ({
     dotenv: resolveApp('.env'),
@@ -22,4 +14,4 @@ const getPaths = () => ({
     appNodeModules: resolveApp('node_modules'),
 });
 
-module.exports = { getPaths, appDirectory, hookFile };
+module.exports = { getPaths, appDirectory, hookFile, resolveApp };

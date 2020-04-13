@@ -1,3 +1,5 @@
+require('../helpers/env')('development');
+
 const path = require('path');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const express = require('express');

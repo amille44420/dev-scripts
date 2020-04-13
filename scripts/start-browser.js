@@ -1,3 +1,5 @@
+require('../helpers/env')('development');
+
 const WebpackDevServer = require('webpack-dev-server');
 const getSettings = require('../configs/settings');
 const getDevServerConfig = require('../configs/webpackDevServer.config');

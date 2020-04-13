@@ -102,6 +102,22 @@ or in your javascript files
 console.log(`my global is ${process.env.NAME}`);
 ```
 
+## Environment configuration
+
+You may update application settings using environment files.
+
+* `.env`: Default.
+* `.env.local`: Local overrides. This file is loaded for all environments except test.
+* `.env.development`, `.env.production`: Environment-specific settings.
+* `.env.development.local`, `.env.production.local`: Local overrides of environment-specific settings.
+
+Files on the left have more priority than files on the right:
+
+* **`npm run start-*`**: `.env.development.local`, `.env.development`, `.env.local`, `.env`
+* **`npm run build-*`**: `.env.production.local`, `.env.production`, `.env.local`, `.env`
+
+These variables will act as the defaults if the machine does not explicitly set them.
+
 ### Override
 
 This package comes with many available hooks to override configurations at specific key points.
