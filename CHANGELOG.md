@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/amille44420/dev-scripts/compare/v2.0.17...v2.1.0) (2020-04-13)
+
+
+### Features
+
+* improve environment configuration ([327c1bb](https://github.com/amille44420/dev-scripts/commit/327c1bbd58986e500f4bc6396cdc8265b29e53c0))
+
 ## [2.0.17](https://github.com/amille44420/dev-scripts/compare/v2.0.16...v2.0.17) (2020-04-13)
 
 ## [2.0.16](https://github.com/amille44420/dev-scripts/compare/v2.0.15...v2.0.16) (2020-04-08)
