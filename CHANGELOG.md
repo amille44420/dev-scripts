@@ -1,3 +1,5 @@
+## [2.1.6](https://github.com/amille44420/dev-scripts/compare/v2.1.5...v2.1.6) (2020-04-28)
+
 ## [2.1.5](https://github.com/amille44420/dev-scripts/compare/v2.1.4...v2.1.5) (2020-04-24)
 
 ## [2.1.4](https://github.com/amille44420/dev-scripts/compare/v2.1.3...v2.1.4) (2020-04-23)
