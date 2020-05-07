@@ -3,20 +3,20 @@ version: 2.1
 jobs:
   deps-install:
     docker:
-      - image:  circleci/node:12.14.1
+      - image:  circleci/node:14.1.0
     steps:
       - checkout
       - restore_cache:
           keys:
-            - npm-install-node12-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
-            - npm-install-node12-{{ checksum "package.json" }}
-            - npm-install-node12
+            - yarn-install-node14-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+            - yarn-install-node14-{{ checksum "package.json" }}
+            - yarn-install-node14
           paths:
             - node_modules
       - run:
-          command: npm install
+          command: yarn install --frozen-lockfile
       - save_cache:
-          key: npm-install-node12-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
+          key: yarn-install-node14-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
       - persist_to_workspace:
@@ -26,30 +26,30 @@ jobs:
 
   code-lint:
     docker:
-      - image: circleci/node:12.14.1
+      - image: circleci/node:14.1.0
     steps:
       - checkout
       - attach_workspace:
           at: ~/project
-      - run: npm run lint
+      - run: yarn lint
 
   commit-lint:
     docker:
-      - image: circleci/node:12.13.0
+      - image: circleci/node:14.1.0
     steps:
       - checkout
       - attach_workspace:
           at: ~/project
-      - run: npm run lint:commit:ci
+      - run: yarn lint:commit:ci
 
   publish:
     docker:
-      - image: circleci/node:12.13.0
+      - image: circleci/node:14.1.0
     steps:
       - checkout
       - attach_workspace:
           at: ~/project
-      - run: npm run publish
+      - run: yarn release
 
 workflows:
   version: 2
