@@ -11,13 +11,13 @@ const setup = nodeEnv => {
 
     // https://github.com/bkeepers/dotenv#what-other-env-files-can-i-use
     const dotenvFiles = [
-        `${dotenv}.${nodeEnv}.local`,
+        dotenv,
         `${dotenv}.${nodeEnv}`,
+        `${dotenv}.${nodeEnv}.local`,
         // Don't include `.env.local` for `test` environment
         // since normally you expect tests to produce the same
         // results for everyone
         nodeEnv !== 'test' && `${dotenv}.local`,
-        dotenv,
     ].filter(Boolean);
 
     // Load environment variables from .env* files. Suppress warnings using silent
