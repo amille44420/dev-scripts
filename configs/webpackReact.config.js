@@ -346,7 +346,7 @@ const getWebpackConfig = settings => {
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
             // React refresh experimental feature
             // https://github.com/pmmmwh/react-refresh-webpack-plugin
-            isEnvDevelopment && withReactRefresh && new ReactRefreshWebpackPlugin({ disableRefreshCheck: true }),
+            isEnvDevelopment && withReactRefresh && new ReactRefreshWebpackPlugin({ overlay: false }),
         ].filter(Boolean),
 
         optimization: {
