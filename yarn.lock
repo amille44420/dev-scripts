@@ -3,9 +3,9 @@
 
 
 "@amille/babel-preset@^1.0.12":
-  version "1.0.31"
-  resolved "https://registry.yarnpkg.com/@amille/babel-preset/-/babel-preset-1.0.31.tgz#32a8f7bb0c939942530f4b97e065946c7354a3fd"
-  integrity sha512-zWoo7akBYla76dh8MOQ/P+vj/yfrbmYq6ksNKPtk5Ztn3G+9k/O37fTX5OAxqNDLdRx5K/XTTrZL/fgLj8IH9w==
+  version "1.0.32"
+  resolved "https://registry.yarnpkg.com/@amille/babel-preset/-/babel-preset-1.0.32.tgz#9671c055064e202ea7fbdbaeaeb5367a6832a1cb"
+  integrity sha512-83cIM0Im1hSO+cJi2Zcm4922EWI1h0IU8W3ELmWUAnXgMvOboxXW+fKhf28bt35gGB/uHi92THphQ1hLIVj2Iw==
   dependencies:
     "@babel/core" "^7.10.4"
     "@babel/plugin-proposal-class-properties" "^7.10.4"
